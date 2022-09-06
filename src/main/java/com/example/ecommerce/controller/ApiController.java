@@ -19,4 +19,5 @@ public class ApiController {
     public List<Product> getAllProducts(){
         return productDao.findAll();
     }
+    
 }

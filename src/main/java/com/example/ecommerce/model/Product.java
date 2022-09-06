@@ -1,47 +1,17 @@
 package com.example.ecommerce.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Product {
+
     @Id
-    @GeneratedValue()
-    private Integer productId;
-    @Column
-    private String productName;
-    @Column
-    private String productCategory;
-    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+    private String description;
     private String image;
-    @Column
-    private Integer price;
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-
-    public String getProductCategory() {
-        return productCategory;
-    }
-
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
-    }
+    private int price;
 
     public String getImage() {
         return image;
@@ -51,11 +21,35 @@ public class Product {
         this.image = image;
     }
 
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -1,6 +1,9 @@
 package com.example.ecommerce.dao;
 
+import com.example.ecommerce.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserDao extends JpaRepository<UserDao, Integer> {
+@Repository
+public interface UserDao extends JpaRepository<User, Integer> {
 }
