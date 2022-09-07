@@ -9,7 +9,7 @@ import java.util.List;
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @OneToOne()
     @JoinColumn(name = "userId",referencedColumnName = "id")
     private User user;
@@ -53,11 +53,12 @@ public class Orders {
         this.product = product;
     }
 
-    public int getId() {
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 }
