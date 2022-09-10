@@ -17,7 +17,6 @@ public class Orders {
     @JoinColumn(name = "productId", referencedColumnName ="id")
     private Product product;
     private int quantity;
-    private String date;
 
     public User getUser() {
         return user;
@@ -35,14 +34,6 @@ public class Orders {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public Product getProduct() {

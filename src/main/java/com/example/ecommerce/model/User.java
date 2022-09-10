@@ -5,21 +5,16 @@ import jakarta.persistence.*;
 @Entity
 public class User {
 
+    public User(String email, String password){
+        this.email = email;
+        this.password = password;
+    }
+    public User(){}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
     private String email;
     private String password;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
